@@ -20,14 +20,15 @@
     <nav class="nav">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a style="text-decoration: none;" href="">Inicio</a>
+                <a style="text-decoration: none;" href="{% url "Inicio" %}">Inicio</a>
             </li>            
             <li class="nav-item">
-                <a style="text-decoration: none;" href="">Prueba</a>
+                <a style="text-decoration: none;" href="{% url "Prueba" %}">Prueba</a>
             </li>           
             <li class="nav-item">
-                <a style="tex-decoration: none;" href="">Estudiante</a>
-        </ul>
+                <a style="tex-decoration: none;" href="{% url "Lista-estudiantes" %}">Estudiante</a>
+            
+            </ul>
     </nav>
 
 
