@@ -8,10 +8,10 @@ class Persona(models.Model):
     email = models.EmailField()
     fecha_nacimiento = models.DateField()
     rol = models.CharField(max_length=20)
-    created_add = models.DateTimeField(auto_now=True)
-    
+    created_at = models.DateTimeField(auto_now_add=True)
+
     def __str__(self):
         return f'{self.nombre} {self.apellidos} - {self.dni} - {self.rol}'
-    
+
     class Meta:
         db_table = 'persona'

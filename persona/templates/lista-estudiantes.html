@@ -1,24 +1,32 @@
- {% extends "index.html" %}
+{% extends "index.html" %}
 {% block content %}
 
-   <h1>{{title}}</h1>
+    <h1>{{ title }}</h1>
 
-   <ul>
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">DNI</th>
+                <th scope="col">Rol</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for estudiante in estudiantes %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ estudiante.nombre }}</td>
+                <td>{{ estudiante.apellidos }}</td>
+                <td>{{ estudiante.dni }}</td>
+                <td>{{ estudiante.rol }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
-    {% for estudiante in estudiantes%}
-        <li>
+    <!-- Botón para agregar nuevos estudiantes -->
+    <a href="{% url 'formulario_estudiante' %}" class="btn btn-primary">Agregar nuevo estudiante</a>
 
-            {{estudiante.nombre}} {{estudiante.apellidos}} 
-
-
-        </li>
-        
-      {% endfor %}
-
-      
-   </ul>
-
-
-
-{% endblock content %}
-
+{% endblock %}

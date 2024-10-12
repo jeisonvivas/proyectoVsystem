@@ -149,9 +149,10 @@ footer{
     margin-bottom: 15px;
 }
 
+/*
 .box form input[type="text"]{
     text-transform: uppercase;
-}
+}*/
 
 .box form input[type="submit"],
 .box form input[type="submit"],
@@ -226,4 +227,25 @@ footer{
     float: left;
     padding: 15px;
     padding-top: 0px;
+}
+
+.estado-activo {
+    background-color: orange;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.estado-suspendido {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.estado-finalizado {
+    background-color: green;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
 }
