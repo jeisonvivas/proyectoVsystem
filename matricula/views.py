@@ -21,4 +21,3 @@ def formulario_matricula(request):
         form = MatriculaForm()  
 
     return render(request, 'formulario_matricula.html', {'form': form})
-

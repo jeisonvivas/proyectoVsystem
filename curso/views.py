@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from .models import curso
 from .forms import CursoForm
 
-
 # Vista para listar los cursos
 def get_curso(request):
     cursos = curso.objects.all()
