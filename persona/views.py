@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Persona
 from .forms import PersonaForm
+from django.shortcuts import render, get_object_or_404,redirect
 
 # Vista para listar estudiantes
 def get_estudiantes(request):
@@ -23,3 +24,4 @@ def formulario_estudiante(request):
         form = PersonaForm()
 
     return render(request, 'formulario_estudiante.html', {'form': form})
+

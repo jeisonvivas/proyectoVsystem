@@ -25,6 +25,11 @@
                 <td>{{ estudiante_curso.fechaFinal }}</td>
                 <td>{{ estudiante_curso.estado }}</td>
                 <td>{{ estudiante_curso.notaFinal }}</td>
+
+                <td>
+                    <!-- Botón para eliminar la relación estudiante-curso por ID -->
+                    <a href="{% url 'eliminar-estudiante-curso' estudiante_curso.id %}" class="btn btn-danger" onclick="return confirm('¿Estás seguro que deseas eliminar esta relación?');">Eliminar</a>
+                </td>
             </tr>
             {% endfor %}
         </tbody>

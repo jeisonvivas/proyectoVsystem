@@ -19,7 +19,7 @@ from django.urls import path
 from mainApp.views import inicio
 from persona.views import get_estudiantes, formulario_estudiante
 from curso.views import get_curso, formulario
-from estudiante_curso.views import Estudiante_Curso, formulario_estudiante_curso
+from estudiante_curso.views import Estudiante_Curso, formulario_estudiante_curso, eliminar_estudiante_curso
 from matricula.views import lista_matriculas, formulario_matricula
 
 urlpatterns = [
@@ -33,4 +33,5 @@ urlpatterns = [
     path('estudiantes-curso/agregar/', formulario_estudiante_curso, name='formulario_estudiante_curso'),
     path('matriculas/', lista_matriculas, name='lista-matriculas'), 
     path('matriculas/nueva/', formulario_matricula, name='formulario_matricula'),  
+   path('eliminar-estudiante-curso/<int:id>/', eliminar_estudiante_curso, name='eliminar-estudiante-curso'),
 ]

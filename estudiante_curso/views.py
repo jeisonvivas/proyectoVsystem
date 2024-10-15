@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import EstudianteCurso
 from .forms import EstudianteCursoForm
+from django.shortcuts import render, get_object_or_404,redirect
 
 # Vista para listar los estudiantes y cursos
 def Estudiante_Curso(request):
@@ -21,3 +22,8 @@ def formulario_estudiante_curso(request):
         form = EstudianteCursoForm()  # Formulario vacío si no es POST
 
     return render(request, 'formulario_estudiante_curso.html', {'form': form})
+
+def eliminar_estudiante_curso(request, id):
+    relacion = get_object_or_404(EstudianteCurso, id=id)
+    relacion.delete()
+    return redirect('lista-estudiantes-cursos')

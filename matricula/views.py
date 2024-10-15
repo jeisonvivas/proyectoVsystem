@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Matricula
 from .forms import MatriculaForm  
 
+
 def lista_matriculas(request):
     matriculas = Matricula.objects.all()  
     return render(request, 'lista_matricula.html', {
@@ -20,3 +21,4 @@ def formulario_matricula(request):
         form = MatriculaForm()  
 
     return render(request, 'formulario_matricula.html', {'form': form})
+
